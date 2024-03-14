@@ -10,8 +10,7 @@ module Strainer
       case component
       when :action_controller
         load_behaviors(
-          Behaviors::ParametersAsHash,
-          Behaviors::ParameterizeChanges
+          Behaviors::ParametersAsHash
         )
       when :active_record
         load_behaviors(
@@ -19,8 +18,7 @@ module Strainer
           Behaviors::ForcedReloading,
           Behaviors::RelationDelegationChanges,
           Behaviors::FinderChanges,
-          Behaviors::RelationQueryMethodChanges,
-          Behaviors::ActiveRecordBeforeCallbackChanges
+          Behaviors::RelationQueryMethodChanges
         )
       when :action_mailer
         load_behaviors(
