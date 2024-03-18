@@ -10,15 +10,13 @@ module Strainer
       case component
       when :action_controller
         load_behaviors(
-          Behaviors::ParametersAsHash,
-          Behaviors::ParameterizeChanges
+          Behaviors::ParametersAsHash
         )
       when :active_record
         load_behaviors(
           Behaviors::ForcedReloading,
           Behaviors::RelationDelegationChanges,
-          Behaviors::FinderChanges,
-          Behaviors::ActiveRecordBeforeCallbackChanges
+          Behaviors::FinderChanges
         )
       end
     end
