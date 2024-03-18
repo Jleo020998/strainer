@@ -14,19 +14,10 @@ module Strainer
         )
       when :active_record
         load_behaviors(
-          Behaviors::AbstractMysqlAdapter,
           Behaviors::ForcedReloading,
           Behaviors::RelationDelegationChanges,
           Behaviors::FinderChanges,
-          Behaviors::RelationQueryMethodChanges
-        )
-      when :action_mailer
-        load_behaviors(
-          Behaviors::MailerWithPathHelpers
-        )
-      when :action_view
-        load_behaviors(
-          Behaviors::ActionViewImageTagChanges
+          Behaviors::ActiveRecordBeforeCallbackChanges
         )
       end
     end
