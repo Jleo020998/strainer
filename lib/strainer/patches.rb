@@ -16,8 +16,7 @@ module Strainer
         load_behaviors(
           Behaviors::ForcedReloading,
           Behaviors::RelationDelegationChanges,
-          Behaviors::FinderChanges,
-          Behaviors::ActiveRecordBeforeCallbackChanges
+          Behaviors::FinderChanges
         )
       end
     end
