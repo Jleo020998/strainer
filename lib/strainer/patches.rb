@@ -8,10 +8,6 @@ module Strainer
     # rubocop:disable Metrics/MethodLength
     def self.setup!(component)
       case component
-      when :action_controller
-        load_behaviors(
-          Behaviors::ParametersAsHash
-        )
       when :active_record
         load_behaviors(
           Behaviors::ForcedReloading,
