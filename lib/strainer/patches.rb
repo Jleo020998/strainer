@@ -7,13 +7,7 @@ module Strainer
   class Patches
     # rubocop:disable Metrics/MethodLength
     def self.setup!(component)
-      case component
-      when :active_record
-        load_behaviors(
-          Behaviors::ForcedReloading,
-          Behaviors::FinderChanges
-        )
-      end
+
     end
     # rubocop:enable Metrics/MethodLength
 
