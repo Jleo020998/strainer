@@ -7,16 +7,7 @@ module Strainer
   class Patches
     # rubocop:disable Metrics/MethodLength
     def self.setup!(component)
-      case component
-      when :action_controller
-        load_behaviors(
-          Behaviors::ParametersAsHash
-        )
-      when :active_record
-        load_behaviors(
-          Behaviors::RelationDelegationChanges
-        )
-      end
+
     end
     # rubocop:enable Metrics/MethodLength
 
